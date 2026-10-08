@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Channel IT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-solid fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/channel it 1.svg" alt="Channel IT"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="seo.html">SEO</a></li><li><a class="dropdown-item" href="local-seo.html">Local SEO</a></li><li><a class="dropdown-item" href="ppc.html">PPC Advertising</a></li><li><a class="dropdown-item" href="web-development.html">Web Development</a></li></ul></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3"><a class="btn btn-get-started" href="contact.html">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section hero-inner">
+    <div class="hero-shapes"><div class="shape shape-1"></div><div class="shape shape-2"></div></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8" data-aos="fade-right">
+          <nav class="breadcrumb-custom"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item active">Portfolio</li></ol></nav>
+          <h1>Our <span>Portfolio</span></h1>
+          <p class="lead">Explore our latest projects and see how we've helped businesses achieve their digital goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters" data-aos="fade-up">
+        <button class="portfolio-filter-btn active" data-filter="all">All</button>
+        <button class="portfolio-filter-btn" data-filter="web-design">Web Design</button>
+        <button class="portfolio-filter-btn" data-filter="seo">SEO</button>
+        <button class="portfolio-filter-btn" data-filter="ppc">PPC</button>
+        <button class="portfolio-filter-btn" data-filter="branding">Branding</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="web-design" data-aos="fade-up">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#6C63FF,#8B83FF);">
+              <i class="bi bi-laptop"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">Web Design</span>
+              <h5 class="mt-2">TechStart E-Commerce Redesign</h5>
+              <p class="text-muted small">Complete redesign of an e-commerce platform resulting in 150% increase in conversions and 40% lower bounce rate.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="seo" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#10B981,#34D399);">
+              <i class="bi bi-graph-up-arrow"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">SEO</span>
+              <h5 class="mt-2">GreenLeaf Organic SEO Campaign</h5>
+              <p class="text-muted small">Achieved 300% increase in organic traffic and top 3 rankings for 40+ high-value keywords in 8 months.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="ppc" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#F59E0B,#FBBF24);">
+              <i class="bi bi-megaphone"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">PPC</span>
+              <h5 class="mt-2">CloudSync PPC Launch Campaign</h5>
+              <p class="text-muted small">Generated 500+ qualified leads with a 350% ROAS through strategic Google Ads and LinkedIn advertising.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#EC4899,#F472B6);">
+              <i class="bi bi-palette"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">Branding</span>
+              <h5 class="mt-2">HealthHub Brand Identity</h5>
+              <p class="text-muted small">Complete brand identity design including logo, color palette, typography, and brand guidelines for a health tech startup.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="web-design" data-aos="fade-up" data-aos-delay="400">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#3B82F6,#60A5FA);">
+              <i class="bi bi-phone"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">Web Design</span>
+              <h5 class="mt-2">FoodieApp Website Development</h5>
+              <p class="text-muted small">Built a responsive web application with online ordering, real-time tracking, and payment integration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="seo" data-aos="fade-up" data-aos-delay="500">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#8B5CF6,#A78BFA);">
+              <i class="bi bi-search"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">SEO</span>
+              <h5 class="mt-2">UrbanStyle Digital Marketing</h5>
+              <p class="text-muted small">Comprehensive SEO strategy that increased organic revenue by 200% and reduced customer acquisition cost by 45%.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="ppc" data-aos="fade-up">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#EF4444,#F87171);">
+              <i class="bi bi-bullseye"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">PPC</span>
+              <h5 class="mt-2">AutoDrive PPC Campaign</h5>
+              <p class="text-muted small">Managed $50K/month ad spend across Google and Facebook, achieving 5x ROAS for an automotive dealership network.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="web-design" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#14B8A6,#2DD4BF);">
+              <i class="bi bi-cart3"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">Web Design</span>
+              <h5 class="mt-2">LuxeHome E-Commerce Store</h5>
+              <p class="text-muted small">Custom Shopify development with advanced filtering, AR product preview, and seamless checkout experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="branding" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-card">
+            <div class="portfolio-img" style="background:linear-gradient(135deg,#6366F1,#818CF8);">
+              <i class="bi bi-brush"></i>
+              <div class="portfolio-overlay"><a href="#" class="btn btn-white btn-sm">View Details</a></div>
+            </div>
+            <div class="portfolio-body">
+              <span class="badge-category">Branding</span>
+              <h5 class="mt-2">EcoWear Brand Launch</h5>
+              <p class="text-muted small">End-to-end brand strategy including visual identity, packaging design, and digital presence for a sustainable fashion brand.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4" data-aos="fade-up">
+          <div class="stat-item"><span class="counter" data-target="800">0</span><span class="stat-suffix">+</span><p class="stat-label">Projects Completed</p></div>
+        </div>
+        <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-item"><span class="counter" data-target="500">0</span><span class="stat-suffix">+</span><p class="stat-label">Happy Clients</p></div>
+        </div>
+        <div class="col-lg-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-item"><span class="counter" data-target="15">0</span><span class="stat-suffix">+</span><p class="stat-label">Awards Won</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" data-aos="zoom-in">
+      <h2>Have a Project in Mind?</h2>
+      <p>Let's discuss how we can bring your vision to life. Get in touch for a free consultation.</p>
+      <a href="contact.html" class="btn btn-white">Start Your Project <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6"><h5><a href="index.html"><img src="images/channel it 1.svg" alt="Channel IT" class="footer-logo-img"></a></h5><p>Full-service digital marketing agency helping businesses achieve their online goals.</p><div class="social-links mt-3"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-instagram"></i></a></div></div>
+        <div class="col-lg-2 col-md-6"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="col-lg-3 col-md-6"><h5>Services</h5><ul><li><a href="seo.html">SEO</a></li><li><a href="local-seo.html">Local SEO</a></li><li><a href="ppc.html">PPC Advertising</a></li><li><a href="web-development.html">Web Development</a></li></ul></div>
+        <div class="col-lg-3 col-md-6"><h5>Contact Info</h5><ul><li><i class="bi bi-geo-alt me-2"></i> 123 Digital Avenue, Tech City</li><li><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</li><li><i class="bi bi-envelope me-2"></i> info@channelit.com</li></ul></div>
+      </div>
+      <div class="footer-bottom text-center"><p>&copy; 2024 Channel IT. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top"><i class="bi bi-chevron-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
