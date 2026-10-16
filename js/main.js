@@ -191,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (navbarCollapse) {
     document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
       link.addEventListener('click', function () {
+        if (this.classList.contains('dropdown-toggle')) return;
         if (navbarCollapse.classList.contains('show')) {
           var bsCollapse = (typeof bootstrap !== 'undefined' && bootstrap.Collapse)
             ? bootstrap.Collapse.getInstance(navbarCollapse) : null;
@@ -199,4 +200,20 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // 11. Nested dropdowns / submenus for mobile
+  document.querySelectorAll('.dropdown-submenu > a').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parent = this.parentElement;
+        var submenu = parent.querySelector('.dropdown-menu');
+        if (submenu) {
+          parent.classList.toggle('show');
+          submenu.classList.toggle('show');
+        }
+      }
+    });
+  });
 });
