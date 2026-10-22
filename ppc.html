@@ -20,14 +20,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li class="dropdown-submenu">
                 <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="seo.html">
-                  <span>SEO</span>
+                  <span><i class="bi bi-graph-up-arrow me-2 text-primary"></i>SEO</span>
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="seo.html#seo"><i class="bi bi-search me-2 text-primary"></i>1. SEO (Search Engine)</a></li>
@@ -35,9 +35,9 @@
                   <li><a class="dropdown-item" href="seo.html#aeo"><i class="bi bi-chat-square-quote me-2 text-primary"></i>3. AEO (Answer Engine)</a></li>
                 </ul>
               </li>
-              <li><a class="dropdown-item" href="local-seo.html">Local SEO</a></li>
-              <li><a class="dropdown-item active" href="ppc.html">PPC Advertising</a></li>
-              <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+              <li><a class="dropdown-item" href="local-seo.html"><i class="bi bi-geo-alt me-2 text-primary"></i>Local SEO</a></li>
+              <li><a class="dropdown-item active" href="ppc.html"><i class="bi bi-megaphone me-2 text-primary"></i>PPC Advertising</a></li>
+              <li><a class="dropdown-item" href="web-development.html"><i class="bi bi-code-slash me-2 text-primary"></i>Web Development</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
@@ -105,10 +105,12 @@
   <!-- Our PPC Services -->
   <section class="section-padding" id="ppc-services">
     <div class="container">
-      <p class="section-label text-center">What We Offer</p>
-      <h2 class="section-title">Our PPC Services</h2>
-      <div class="title-underline"></div>
-      <p class="section-subtitle">Comprehensive pay-per-click solutions to grow your business and maximize every advertising dollar.</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Our PPC Services</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle mx-auto">Comprehensive pay-per-click solutions to grow your business and maximize every advertising dollar.</p>
+      </div>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6" data-aos="fade-up">
           <div class="service-card">
@@ -157,45 +159,56 @@
   </section>
 
   <!-- Our PPC Process -->
-  <section class="section-padding process-section">
+  <section class="section-padding process-section" id="process">
     <div class="container">
-      <p class="section-label text-center">How We Work</p>
-      <h2 class="section-title">Our PPC Process</h2>
-      <div class="title-underline"></div>
-      <p class="section-subtitle">A proven, results-driven approach to managing your pay-per-click campaigns from strategy to optimization.</p>
-      <div class="row g-4 mt-3">
-        <div class="col-lg col-md-6 process-connector" data-aos="fade-up">
-          <div class="process-step">
-            <div class="step-number">1</div>
-            <h5>Campaign Strategy & Research</h5>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">How We Work</span>
+        <h2 class="section-title">Our PPC Process</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle mx-auto">A proven, results-driven approach to managing your pay-per-click campaigns from strategy to optimization.</p>
+      </div>
+      <div class="row g-4 justify-content-center mt-3">
+        <!-- Step 1 -->
+        <div class="col-lg col-md-6 col-12" data-aos="fade-up">
+          <div class="process-step text-center">
+            <div class="process-number"><span>1</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
+            <h5>Campaign Strategy &amp; Research</h5>
             <p>We analyze your market, competitors, and goals to build a comprehensive PPC strategy with targeted keywords and audience segments.</p>
           </div>
         </div>
-        <div class="col-lg col-md-6 process-connector" data-aos="fade-up" data-aos-delay="100">
-          <div class="process-step">
-            <div class="step-number">2</div>
-            <h5>Ad Creation & Setup</h5>
+        <!-- Step 2 -->
+        <div class="col-lg col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-step text-center">
+            <div class="process-number"><span>2</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
+            <h5>Ad Creation &amp; Setup</h5>
             <p>Our team crafts compelling ad copy, designs eye-catching visuals, and sets up campaign structures optimized for performance.</p>
           </div>
         </div>
-        <div class="col-lg col-md-6 process-connector" data-aos="fade-up" data-aos-delay="200">
-          <div class="process-step">
-            <div class="step-number">3</div>
-            <h5>Targeting & Bid Management</h5>
+        <!-- Step 3 -->
+        <div class="col-lg col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-step text-center">
+            <div class="process-number"><span>3</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
+            <h5>Targeting &amp; Bid Management</h5>
             <p>We configure precise audience targeting and implement smart bidding strategies to maximize your budget efficiency and reach.</p>
           </div>
         </div>
-        <div class="col-lg col-md-6 process-connector" data-aos="fade-up" data-aos-delay="300">
-          <div class="process-step">
-            <div class="step-number">4</div>
-            <h5>A/B Testing & Optimization</h5>
+        <!-- Step 4 -->
+        <div class="col-lg col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-step text-center">
+            <div class="process-number"><span>4</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
+            <h5>A/B Testing &amp; Optimization</h5>
             <p>Continuous testing of ad variations, landing pages, and targeting parameters ensures campaigns improve over time.</p>
           </div>
         </div>
-        <div class="col-lg col-md-6 process-connector" data-aos="fade-up" data-aos-delay="400">
-          <div class="process-step">
-            <div class="step-number">5</div>
-            <h5>Reporting & ROI Analysis</h5>
+        <!-- Step 5 -->
+        <div class="col-lg col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+          <div class="process-step text-center">
+            <div class="process-number"><span>5</span></div>
+            <h5>Reporting &amp; ROI Analysis</h5>
             <p>Detailed reports with actionable insights keep you informed on performance, spend allocation, and return on investment.</p>
           </div>
         </div>

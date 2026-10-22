@@ -20,14 +20,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li class="dropdown-submenu">
                 <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="seo.html">
-                  <span>SEO</span>
+                  <span><i class="bi bi-graph-up-arrow me-2 text-primary"></i>SEO</span>
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="seo.html#seo"><i class="bi bi-search me-2 text-primary"></i>1. SEO (Search Engine)</a></li>
@@ -35,9 +35,9 @@
                   <li><a class="dropdown-item" href="seo.html#aeo"><i class="bi bi-chat-square-quote me-2 text-primary"></i>3. AEO (Answer Engine)</a></li>
                 </ul>
               </li>
-              <li><a class="dropdown-item active" href="local-seo.html">Local SEO</a></li>
-              <li><a class="dropdown-item" href="ppc.html">PPC Advertising</a></li>
-              <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+              <li><a class="dropdown-item active" href="local-seo.html"><i class="bi bi-geo-alt me-2 text-primary"></i>Local SEO</a></li>
+              <li><a class="dropdown-item" href="ppc.html"><i class="bi bi-megaphone me-2 text-primary"></i>PPC Advertising</a></li>
+              <li><a class="dropdown-item" href="web-development.html"><i class="bi bi-code-slash me-2 text-primary"></i>Web Development</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
@@ -62,7 +62,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Services</a></li>
+              <li class="breadcrumb-item"><a href="index.html#services">Services</a></li>
               <li class="breadcrumb-item active" aria-current="page">Local SEO</li>
             </ol>
           </nav>
@@ -127,10 +127,12 @@
   <!-- Our Local SEO Services -->
   <section class="section-padding" id="local-seo-services">
     <div class="container">
-      <p class="section-label text-center">What We Offer</p>
-      <h2 class="section-title">Our Local SEO Services</h2>
-      <div class="title-underline"></div>
-      <p class="section-subtitle">Comprehensive local SEO solutions designed to put your business on the map and ahead of the competition.</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Our Local SEO Services</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle mx-auto">Comprehensive local SEO solutions designed to put your business on the map and ahead of the competition.</p>
+      </div>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6" data-aos="fade-up">
           <div class="service-card">
@@ -181,49 +183,61 @@
   <!-- How Local SEO Works - Process Timeline -->
   <section class="section-padding process-section" id="local-seo-process">
     <div class="container">
-      <p class="section-label text-center">Our Approach</p>
-      <h2 class="section-title">How Local SEO Works</h2>
-      <div class="title-underline"></div>
-      <p class="section-subtitle">Our proven step-by-step process ensures your business achieves and maintains dominant local search visibility.</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Our Approach</span>
+        <h2 class="section-title">How Local SEO Works</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle mx-auto">Our proven step-by-step process ensures your business achieves and maintains dominant local search visibility.</p>
+      </div>
       <div class="row g-4 mt-3">
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up">
-          <div class="process-step">
-            <div class="step-number">1</div>
-            <h5>Local Audit & Analysis</h5>
+        <!-- Step 1 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+          <div class="process-step text-center">
+            <div class="process-number"><span>1</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
+            <h5>Local Audit &amp; Analysis</h5>
             <p>We conduct a comprehensive audit of your current local presence, analyze competitors, and identify gaps and opportunities for improvement.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="100">
-          <div class="process-step">
-            <div class="step-number">2</div>
+        <!-- Step 2 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-step text-center">
+            <div class="process-number"><span>2</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
             <h5>Google Business Profile Setup</h5>
             <p>We claim, verify, and fully optimize your Google Business Profile with accurate NAP data, categories, photos, and compelling descriptions.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="200">
-          <div class="process-step">
-            <div class="step-number">3</div>
-            <h5>Citation Building & NAP Consistency</h5>
+        <!-- Step 3 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-step text-center">
+            <div class="process-number"><span>3</span></div>
+            <h5>Citation Building &amp; NAP Consistency</h5>
             <p>We ensure your business name, address, and phone number are consistent across all directories and fix any existing inconsistencies.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="300">
-          <div class="process-step">
-            <div class="step-number">4</div>
+        <!-- Step 4 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-step text-center">
+            <div class="process-number"><span>4</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
             <h5>Review Strategy Implementation</h5>
             <p>We set up automated review request systems, create response templates, and develop a strategy to consistently earn positive reviews.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="400">
-          <div class="process-step">
-            <div class="step-number">5</div>
-            <h5>Local Content & Link Building</h5>
+        <!-- Step 5 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+          <div class="process-step text-center">
+            <div class="process-number"><span>5</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
+            <h5>Local Content &amp; Link Building</h5>
             <p>We create geo-targeted content and build relationships with local websites to earn authoritative backlinks that boost your rankings.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="process-step">
-            <div class="step-number">6</div>
+        <!-- Step 6 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+          <div class="process-step text-center">
+            <div class="process-number"><span>6</span></div>
             <h5>Performance Tracking</h5>
             <p>We monitor rankings, traffic, and conversions with detailed reporting, continuously optimizing your strategy for maximum results.</p>
           </div>
@@ -235,10 +249,12 @@
   <!-- Benefits of Local SEO -->
   <section class="section-padding bg-light-purple" id="benefits">
     <div class="container">
-      <p class="section-label text-center">Why Local SEO Matters</p>
-      <h2 class="section-title">Benefits of Local SEO</h2>
-      <div class="title-underline"></div>
-      <p class="section-subtitle">Discover how local SEO can transform your business by connecting you with customers right in your neighborhood.</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Why Local SEO Matters</span>
+        <h2 class="section-title">Benefits of Local SEO</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle mx-auto">Discover how local SEO can transform your business by connecting you with customers right in your neighborhood.</p>
+      </div>
       <div class="row g-4">
         <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="service-card text-center">

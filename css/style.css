@@ -712,17 +712,25 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   box-shadow: var(--cit-shadow-md);
   padding: 0.5rem;
   margin-top: 0.5rem;
+  min-width: 225px;
   animation: fadeInDown 0.25s ease;
 }
 
 .navbar-cit .dropdown-item,
 .dropdown-item {
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.15rem;
   font-size: var(--cit-fs-sm);
   font-weight: 500;
   color: var(--cit-secondary);
   transition: var(--cit-transition-fast);
   border-radius: 8px;
+}
+
+.navbar-cit .dropdown-item i,
+.dropdown-item i {
+  display: inline-block;
+  width: 1.25rem;
+  text-align: center;
 }
 
 .navbar-cit .dropdown-item:hover,
@@ -742,9 +750,9 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   top: 0;
   left: 100%;
   margin-top: -6px;
-  margin-left: 0.15rem;
+  margin-left: 0.2rem;
   display: none;
-  min-width: 230px;
+  min-width: 245px;
 }
 
 .dropdown-submenu:hover > .dropdown-menu,
@@ -753,15 +761,17 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   display: block;
 }
 
+/* Right-pointing arrow for desktop submenu */
+.dropdown-submenu > a.dropdown-toggle::after,
 .dropdown-submenu > a::after {
   display: inline-block;
   margin-left: auto;
-  vertical-align: 0.255em;
+  vertical-align: middle;
   content: "";
   border-top: 0.3em solid transparent;
   border-right: 0;
   border-bottom: 0.3em solid transparent;
-  border-left: 0.3em solid;
+  border-left: 0.35em solid currentColor;
 }
 
 @media (max-width: 991.98px) {
@@ -769,10 +779,25 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
     position: static;
     left: auto;
     margin-top: 0.25rem;
-    margin-left: 1rem;
+    margin-left: 0.75rem;
     box-shadow: none;
     border-left: 2px solid var(--cit-primary, #6C63FF);
     background-color: rgba(var(--cit-primary-rgb, 108, 99, 255), 0.04);
+  }
+
+  /* Down-pointing arrow for mobile submenu */
+  .dropdown-submenu > a.dropdown-toggle::after,
+  .dropdown-submenu > a::after {
+    border-top: 0.35em solid currentColor;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    transition: transform 0.2s ease;
+  }
+
+  .dropdown-submenu.show > a.dropdown-toggle::after,
+  .dropdown-submenu.show > a::after {
+    transform: rotate(180deg);
   }
 }
 
@@ -1069,6 +1094,12 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   margin-bottom: 0.5rem;
   position: relative;
   color: var(--cit-secondary);
+  text-align: center;
+}
+
+.text-start .section-title,
+.section-title.text-start {
+  text-align: left;
 }
 
 /* Purple underline accent */
@@ -1077,7 +1108,13 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   height: 4px;
   background: var(--cit-gradient-primary);
   border-radius: 4px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.25rem;
+}
+
+.text-start .title-underline,
+.title-underline.text-start {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .section-heading .section-title::after {
@@ -1100,7 +1137,19 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   color: var(--cit-gray-500);
   line-height: 1.8;
   margin-bottom: 0;
-  max-width: 580px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.text-start .section-subtitle,
+.section-heading.text-start .section-desc,
+.section-heading.text-start .section-subtitle,
+.section-subtitle.text-start {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
 }
 
 /* Divider */
@@ -1319,7 +1368,10 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
 }
 
 .process-step .step-circle,
-.process-number {
+.process-step .step-number,
+.process-step .process-number,
+.process-number,
+.step-number {
   width: 70px;
   height: 70px;
   border-radius: var(--cit-radius-circle);
@@ -1337,30 +1389,58 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   box-shadow: 0 8px 24px rgba(var(--cit-primary-rgb), 0.3);
 }
 
-.process-number span {
+.process-number span,
+.step-number span,
+.process-step .step-circle,
+.process-step .step-number,
+.process-step .process-number {
   color: var(--cit-white);
   font-size: 1.5rem;
   font-weight: 800;
 }
 
 .process-step.active .step-circle,
-.process-step:hover .step-circle {
+.process-step:hover .step-circle,
+.process-step.active .process-number,
+.process-step:hover .process-number,
+.process-step.active .step-number,
+.process-step:hover .step-number {
   transform: scale(1.1);
   box-shadow: 0 12px 30px rgba(var(--cit-primary-rgb), 0.4);
 }
 
-.process-connector {
+/* Safety reset: if process-connector class is on a column element, do not break grid flow */
+[class*="col-"].process-connector,
+.col-lg.process-connector,
+.col-md-6.process-connector,
+.col-12.process-connector {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  opacity: 1 !important;
+  z-index: auto !important;
+}
+
+/* Horizontal connector line connecting steps */
+.process-step .process-connector {
   position: absolute;
   top: 35px;
-  left: calc(50% + 40px);
-  width: calc(100% - 30px);
+  left: 50%;
+  width: 100%;
   height: 3px;
   background: linear-gradient(90deg, var(--cit-primary), var(--cit-primary-light));
-  opacity: 0.3;
+  opacity: 0.35;
   z-index: 1;
 }
 
-.col-lg-3:last-child .process-connector {
+.col-lg-3:last-child .process-connector,
+.col-lg-4:nth-child(3n) .process-connector,
+.col-lg-4:last-child .process-connector,
+.col-lg:last-child .process-connector,
+[class*="col-"]:last-child .process-connector {
   display: none !important;
 }
 
@@ -3184,9 +3264,17 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
 
   .section-padding { padding: 4rem 0; }
   .section-heading { font-size: 1.9rem; }
-  .section-title { font-size: 1.8rem; }
-
-  .process-connector { display: none !important; }
+  /* Hide connector lines on tablet and mobile */
+  .process-step .process-connector,
+  .process-connector:not([class*="col"]) {
+    display: none !important;
+  }
+  [class*="col-"].process-connector,
+  .col-lg.process-connector,
+  .col-md-6.process-connector,
+  .col-12.process-connector {
+    display: block !important;
+  }
 
   /* Navbar mobile */
   .navbar-cit .navbar-collapse,
@@ -3394,13 +3482,18 @@ h4, .h4 { font-size: var(--cit-fs-h4); }
   }
 
   .process-step .step-circle,
-  .process-number {
+  .process-step .step-number,
+  .process-step .process-number,
+  .process-number,
+  .step-number {
     width: 55px;
     height: 55px;
     font-size: 1.2rem;
   }
 
-  .process-number span { font-size: 1.2rem; }
+  .process-number span,
+  .step-number span,
+  .process-step .step-number { font-size: 1.2rem; }
 
   .testimonial-card {
     padding: 1.5rem;

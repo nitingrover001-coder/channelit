@@ -20,15 +20,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <li class="dropdown-submenu">
                 <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="seo.html">
-                  <span><i class="bi bi-graph-up-arrow me-2"></i>SEO</span>
+                  <span><i class="bi bi-graph-up-arrow me-2 text-primary"></i>SEO</span>
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="seo.html#seo"><i class="bi bi-search me-2 text-primary"></i>1. SEO (Search Engine)</a></li>
@@ -36,9 +35,9 @@
                   <li><a class="dropdown-item" href="seo.html#aeo"><i class="bi bi-chat-square-quote me-2 text-primary"></i>3. AEO (Answer Engine)</a></li>
                 </ul>
               </li>
-              <li><a class="dropdown-item" href="local-seo.html"><i class="bi bi-geo-alt me-2"></i>Local SEO</a></li>
-              <li><a class="dropdown-item" href="ppc.html"><i class="bi bi-megaphone me-2"></i>PPC</a></li>
-              <li><a class="dropdown-item active" href="web-development.html"><i class="bi bi-code-slash me-2"></i>Web Development</a></li>
+              <li><a class="dropdown-item" href="local-seo.html"><i class="bi bi-geo-alt me-2 text-primary"></i>Local SEO</a></li>
+              <li><a class="dropdown-item" href="ppc.html"><i class="bi bi-megaphone me-2 text-primary"></i>PPC Advertising</a></li>
+              <li><a class="dropdown-item active" href="web-development.html"><i class="bi bi-code-slash me-2 text-primary"></i>Web Development</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
@@ -63,7 +62,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom mb-3">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Services</a></li>
+              <li class="breadcrumb-item"><a href="index.html#services">Services</a></li>
               <li class="breadcrumb-item active" aria-current="page">Web Development</li>
             </ol>
           </nav>
@@ -154,11 +153,11 @@
   <!-- Our Web Development Services -->
   <section id="services" class="section-padding bg-light-purple">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
-        <p class="section-label">What We Offer</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">What We Offer</span>
         <h2 class="section-title">Our Web Development Services</h2>
         <div class="title-underline"></div>
-        <p class="section-subtitle">From simple landing pages to complex web applications, we have the expertise to build exactly what your business needs.</p>
+        <p class="section-subtitle mx-auto">From simple landing pages to complex web applications, we have the expertise to build exactly what your business needs.</p>
       </div>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6" data-aos="fade-up">
@@ -214,53 +213,63 @@
   </section>
 
   <!-- Our Development Process -->
-  <section class="section-padding process-section">
+  <section class="section-padding process-section" id="process">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
-        <p class="section-label">How We Work</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">How We Work</span>
         <h2 class="section-title">Our Development Process</h2>
         <div class="title-underline"></div>
-        <p class="section-subtitle">A proven, transparent process that keeps you informed at every step and delivers exceptional results on time and on budget.</p>
+        <p class="section-subtitle mx-auto">A proven, transparent process that keeps you informed at every step and delivers exceptional results on time and on budget.</p>
       </div>
       <div class="row g-4 mt-3">
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up">
-          <div class="process-step">
-            <div class="step-number">1</div>
+        <!-- Step 1 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+          <div class="process-step text-center">
+            <div class="process-number"><span>1</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
             <h5>Discovery &amp; Planning</h5>
             <p>We dive deep into your business goals, target audience, and competitors to create a comprehensive project roadmap and strategy.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="100">
-          <div class="process-step">
-            <div class="step-number">2</div>
+        <!-- Step 2 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-step text-center">
+            <div class="process-number"><span>2</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
             <h5>UI/UX Design</h5>
             <p>Our designers craft wireframes and high-fidelity mockups focused on user experience, ensuring every interaction feels intuitive and engaging.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="200">
-          <div class="process-step">
-            <div class="step-number">3</div>
+        <!-- Step 3 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-step text-center">
+            <div class="process-number"><span>3</span></div>
             <h5>Development &amp; Coding</h5>
             <p>Clean, semantic code with modern frameworks. We build responsive, performant websites following industry best practices and coding standards.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up">
-          <div class="process-step">
-            <div class="step-number">4</div>
+        <!-- Step 4 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+          <div class="process-step text-center">
+            <div class="process-number"><span>4</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
             <h5>Testing &amp; QA</h5>
             <p>Rigorous testing across all devices and browsers. We check functionality, performance, accessibility, and security before any launch.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 process-connector" data-aos="fade-up" data-aos-delay="100">
-          <div class="process-step">
-            <div class="step-number">5</div>
+        <!-- Step 5 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-step text-center">
+            <div class="process-number"><span>5</span></div>
+            <div class="process-connector d-none d-lg-block"></div>
             <h5>Launch &amp; Deployment</h5>
             <p>Smooth, zero-downtime deployment with DNS configuration, SSL setup, analytics integration, and everything needed for a successful launch.</p>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="process-step">
-            <div class="step-number">6</div>
+        <!-- Step 6 -->
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-step text-center">
+            <div class="process-number"><span>6</span></div>
             <h5>Ongoing Support</h5>
             <p>Post-launch monitoring, updates, and continuous optimization. We remain your dedicated partner to ensure long-term website success.</p>
           </div>
@@ -272,11 +281,11 @@
   <!-- Technologies We Use -->
   <section class="section-padding">
     <div class="container">
-      <div class="text-center" data-aos="fade-up">
-        <p class="section-label">Our Tech Stack</p>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Our Tech Stack</span>
         <h2 class="section-title">Technologies We Use</h2>
         <div class="title-underline"></div>
-        <p class="section-subtitle">We leverage the latest and most reliable technologies to build websites and applications that are fast, secure, and future-proof.</p>
+        <p class="section-subtitle mx-auto">We leverage the latest and most reliable technologies to build websites and applications that are fast, secure, and future-proof.</p>
       </div>
       <div class="d-flex flex-wrap justify-content-center gap-3 mt-2" data-aos="fade-up" data-aos-delay="100">
         <span class="tech-badge"><i class="bi bi-filetype-html"></i> HTML5</span>
@@ -366,7 +375,7 @@
         <div class="col-lg-3 col-md-6">
           <h5>Services</h5>
           <ul>
-            <li><a href="seo.html">SEO Optimization</a></li>
+            <li><a href="seo.html">SEO</a></li>
             <li><a href="local-seo.html">Local SEO</a></li>
             <li><a href="ppc.html">PPC Advertising</a></li>
             <li><a href="web-development.html">Web Development</a></li>
