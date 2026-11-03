@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow non-content paths
+Disallow: /.git/
+Disallow: /firebase-debug.log
+
+# Sitemap
+Sitemap: https://channelit.co.in/sitemap.xml
