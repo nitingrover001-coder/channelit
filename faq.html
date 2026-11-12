@@ -159,19 +159,188 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-submenu">
-                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="seo.html">
-                  <span>SEO</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="seo.html#seo"><i class="bi bi-search me-2 text-primary"></i>1. SEO (Search Engine)</a></li>
-                  <li><a class="dropdown-item" href="seo.html#geo"><i class="bi bi-cpu me-2 text-primary"></i>2. GEO (Generative Engine)</a></li>
-                  <li><a class="dropdown-item" href="seo.html#aeo"><i class="bi bi-chat-square-quote me-2 text-primary"></i>3. AEO (Answer Engine)</a></li>
-                </ul>
-              </li>
+          <li class="nav-item dropdown dropdown-mega">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center gap-1" href="#" id="servicesMegaDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              <span>Services</span>
+              <i class="ti ti-chevron-down mega-chevron"></i>
+            </a>
+            <div class="dropdown-menu mega-menu-services" aria-labelledby="servicesMegaDropdown">
+              <!-- Top Story Header -->
+              <div class="mega-menu-header">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                  <div>
+                    <div class="mega-story-pill mb-2">
+                      <span class="mega-pill-dot"></span>
+                      <span>IT consulting + digital marketing</span>
+                    </div>
+                    <h4 class="mega-story-title">
+                      <span class="story-build">Build.</span>
+                      <span class="story-automate">Automate.</span>
+                      <span class="story-grow">Grow.</span>
+                    </h4>
+                    <p class="mega-story-sub">AI-powered software, smart automation, and marketing that gets you found.</p>
+                  </div>
+                  <div class="d-none d-md-flex align-items-center">
+                    <a href="contact.html" class="btn-mega-cta">
+                      <i class="ti ti-sparkles me-1"></i> Free Consultation
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 Pillars Grid with 4 boxed services each -->
+              <div class="mega-menu-body">
+                <div class="row g-3 g-lg-4">
+                  <!-- Pillar 1: Build -->
+                  <div class="col-lg-4 col-md-12 mega-pillar-col">
+                    <div class="mega-pillar-header pillar-build">
+                      <div class="mega-pillar-icon"><i class="ti ti-code"></i></div>
+                      <div>
+                        <h5 class="mega-pillar-title">Build <span class="mega-pillar-tagline">Software, web and apps</span></h5>
+                      </div>
+                    </div>
+                    <div class="mega-cards-stack">
+                      <a href="contact.html?service=crm" class="mega-service-box build-box">
+                        <div class="mega-box-icon"><i class="ti ti-users"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">CRM development</span>
+                          <span class="mega-box-desc">Custom CRMs built around your sales flow</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="web-development.html" class="mega-service-box build-box">
+                        <div class="mega-box-icon"><i class="ti ti-layout-dashboard"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">Web application development</span>
+                          <span class="mega-box-desc">Scalable web apps and SaaS products</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="web-development.html" class="mega-service-box build-box">
+                        <div class="mega-box-icon"><i class="ti ti-world"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">Website development</span>
+                          <span class="mega-box-desc">Fast sites built to convert visitors</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="contact.html?service=mobile" class="mega-service-box build-box">
+                        <div class="mega-box-icon"><i class="ti ti-device-mobile"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">Android and iOS development</span>
+                          <span class="mega-box-desc">Native and cross-platform apps</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Pillar 2: Automate -->
+                  <div class="col-lg-4 col-md-12 mega-pillar-col">
+                    <div class="mega-pillar-header pillar-automate">
+                      <div class="mega-pillar-icon"><i class="ti ti-bolt"></i></div>
+                      <div>
+                        <h5 class="mega-pillar-title">Automate <span class="mega-pillar-tagline">AI and workflow automation</span></h5>
+                      </div>
+                    </div>
+                    <div class="mega-cards-stack">
+                      <a href="contact.html?service=ai-solutions" class="mega-service-box automate-box">
+                        <div class="mega-box-icon"><i class="ti ti-brain"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">AI solutions development</span>
+                          <span class="mega-box-desc">Copilots and custom AI that cut manual work</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="contact.html?service=mlops" class="mega-service-box automate-box">
+                        <div class="mega-box-icon"><i class="ti ti-refresh"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">MLOps</span>
+                          <span class="mega-box-desc">Deploy and monitor ML models</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="contact.html?service=chatbots" class="mega-service-box automate-box">
+                        <div class="mega-box-icon"><i class="ti ti-message-chatbot"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">AI chatbots and WhatsApp automation</span>
+                          <span class="mega-box-desc">Answer and qualify leads 24/7</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="contact.html?service=workflow" class="mega-service-box automate-box">
+                        <div class="mega-box-icon"><i class="ti ti-route"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">Workflow and process automation</span>
+                          <span class="mega-box-desc">Connect your tools, remove repeat tasks</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Pillar 3: Grow -->
+                  <div class="col-lg-4 col-md-12 mega-pillar-col">
+                    <div class="mega-pillar-header pillar-grow">
+                      <div class="mega-pillar-icon"><i class="ti ti-trending-up"></i></div>
+                      <div>
+                        <h5 class="mega-pillar-title">Grow <span class="mega-pillar-tagline">Marketing and creative</span></h5>
+                      </div>
+                    </div>
+                    <div class="mega-cards-stack">
+                      <a href="ppc.html" class="mega-service-box grow-box">
+                        <div class="mega-box-icon"><i class="ti ti-target-arrow"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">Meta and Google ads</span>
+                          <span class="mega-box-desc">Performance campaigns focused on ROI</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="seo.html" class="mega-service-box grow-box">
+                        <div class="mega-box-icon"><i class="ti ti-search"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">SEO, AEO and GEO</span>
+                          <span class="mega-box-desc">Rank on Google, get cited by AI</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="contact.html?service=video" class="mega-service-box grow-box">
+                        <div class="mega-box-icon"><i class="ti ti-video"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">AI video production</span>
+                          <span class="mega-box-desc">Ads and explainers in days</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                      <a href="contact.html?service=animation" class="mega-service-box grow-box">
+                        <div class="mega-box-icon"><i class="ti ti-3d-cube-sphere"></i></div>
+                        <div class="mega-box-content">
+                          <span class="mega-box-title">2D and 3D animation</span>
+                          <span class="mega-box-desc">Product demos and brand motion</span>
+                        </div>
+                        <i class="ti ti-arrow-right mega-box-arrow"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mega Footer -->
+              <div class="mega-menu-footer">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-white text-dark border px-2 py-1"><i class="ti ti-sparkles text-primary me-1"></i> Full Ecosystem</span>
+                    <span class="text-muted small">From modern code to autonomous workflows and scaled revenue.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <a href="index.html#services" class="mega-footer-link">
+                      View full services overview <i class="ti ti-arrow-right ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
               <li><a class="dropdown-item" href="local-seo.html">Local SEO</a></li>
               <li><a class="dropdown-item" href="ppc.html">PPC Advertising</a></li>
               <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>

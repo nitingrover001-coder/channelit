@@ -216,4 +216,64 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // 12. Service pillar filtering (Build. Automate. Grow.)
+  var pillarFilterBtns = document.querySelectorAll('.btn-filter-pillar');
+  var pillarGroups = document.querySelectorAll('.service-pillar-group');
+  if (pillarFilterBtns.length > 0 && pillarGroups.length > 0) {
+    pillarFilterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        pillarFilterBtns.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-filter');
+        pillarGroups.forEach(function (group) {
+          if (filter === 'all' || group.getAttribute('data-pillar') === filter) {
+            group.style.display = '';
+            group.style.opacity = '0';
+            void group.offsetWidth;
+            group.style.transition = 'opacity 0.3s ease';
+            group.style.opacity = '1';
+          } else {
+            group.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // 13. Auto-select contact form service from URL params (?service=...)
+  var urlParams = new URLSearchParams(window.location.search);
+  var serviceParam = urlParams.get('service');
+  if (serviceParam) {
+    var subjectSelect = document.querySelector('select[name="subject"]');
+    if (subjectSelect) {
+      var matchFound = false;
+      for (var i = 0; i < subjectSelect.options.length; i++) {
+        if (subjectSelect.options[i].value.toLowerCase() === serviceParam.toLowerCase()) {
+          subjectSelect.selectedIndex = i;
+          matchFound = true;
+          break;
+        }
+      }
+      if (!matchFound) {
+        for (var j = 0; j < subjectSelect.options.length; j++) {
+          if (subjectSelect.options[j].value.toLowerCase().indexOf(serviceParam.toLowerCase()) !== -1) {
+            subjectSelect.selectedIndex = j;
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  // 14. Mobile mega-menu link click handler (close menu when card clicked)
+  document.querySelectorAll('.mega-service-box, .mega-footer-link').forEach(function (box) {
+    box.addEventListener('click', function () {
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        var bsCollapse = (typeof bootstrap !== 'undefined' && bootstrap.Collapse)
+          ? bootstrap.Collapse.getInstance(navbarCollapse) : null;
+        if (bsCollapse) { bsCollapse.hide(); } else { navbarCollapse.classList.remove('show'); }
+      }
+    });
+  });
 });
